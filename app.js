@@ -55,7 +55,7 @@ const api = () =>{
 }
 
 
-const interval = setInterval(api, 60000)
+const interval = setInterval(api,(20 * 60000) )
 
 
 
