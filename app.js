@@ -19,7 +19,7 @@ const api = () =>{
         };
 
         let date = new Date();
-        let hours = date.getHours();
+        let hours = date.getHours() - 3;
         let min = date.getMinutes();
         let timeNow = `${hours}:${min}`;
 
