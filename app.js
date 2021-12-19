@@ -19,10 +19,27 @@ const api = () =>{
         };
 
         let date = new Date();
-        let hours = date.getHours() - 3;
+        let hours = (Number(date.getHours()));
         let min = date.getMinutes();
-        let timeNow = `${hours}:${min}`;
+        
 
+        switch(hours){
+            case 0:
+                hours = 21;
+                break;
+            case 1:
+                hours = 22;
+                break;
+            case 2:
+                hours = 23;
+                break;
+            default:
+                hours -= 3;
+                break;
+        }
+
+
+        let timeNow = `${hours}:${min}`;
         if(hours <= 9 && min >= 10){
             timeNow = `0${hours}:${min}`;
         } else if(hours >= 10 && min <= 9 ) {
@@ -54,8 +71,8 @@ const api = () =>{
     })
 }
 
-
-const interval = setInterval(api,(20 * 60000) )
+api();
+//const interval = setInterval(api,(20 * 60000) )
 
 
 
