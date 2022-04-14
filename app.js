@@ -13,9 +13,9 @@ const api = () =>{
     request(apiLink, function (e, response, body) {
         let moeda = JSON.parse(body);
         let dolar = {
-            value: Number(moeda.USD.bid).toFixed(2),
-            pctChange: moeda.USD.pctChange,
-            varBid: Number(moeda.USD.varBid).toFixed(2)
+            value: Number(moeda.USDBRL.bid).toFixed(2),
+            pctChange: moeda.USDBRL.pctChange,
+            varBid: Number(moeda.USDBRL.varBid).toFixed(2)
         };
 
         let date = new Date();
